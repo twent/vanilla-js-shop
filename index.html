@@ -166,14 +166,14 @@
                 <div class="modal-body">
                     <form action="#" method="get" id="login-form">
                         <label for="login-control" class="col-form-label">Логин:</label>
-                        <input name="login" class="form-control mb-3" type="text" id="login-control">
+                        <input name="login" class="form-control mb-3" type="text" id="login-control" required>
                         <label for="password-control" class="col-form-label">Пароль:</label>
-                        <input name="password" class="form-control mb-3" type="text" id="password-control">
+                        <input name="password" class="form-control mb-3" type="password" id="password-control" required>
                     </form>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-outline-dark close-btn" data-bs-dismiss="modal">Отмена</button>
-                    <button type="button" class="btn btn-dark login-btn">Войти</button>
+                    <button type="submit" class="btn btn-dark login-btn">Войти</button>
                 </div>
             </div>
         </div>

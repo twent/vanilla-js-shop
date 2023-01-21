@@ -56,15 +56,23 @@ loginBtn.addEventListener('click', () => {
     let loginForm = authModal.querySelector('#login-form')
     let loginFormData = new FormData(loginForm)
 
-    let authData = {
-        login: loginFormData.get('login'),
-        password: loginFormData.get('password'),
+    let loginValue = loginFormData.get('login')
+    let passwordValue = loginFormData.get('password')
+
+    if (loginValue && passwordValue) {
+        let authData = {
+            login: loginValue,
+            password: passwordValue,
+        }
+    
+        localStorage.setItem('authData', JSON.stringify(authData))
+    
+        login()
+
+        return
     }
 
-    localStorage.setItem('authData', JSON.stringify(authData))
-
-    console.log(authData)
-    login()
+    alert('Введите данные для входа')
 })
 
 logoutBtn.addEventListener('click', logout)
