@@ -1,0 +1,19 @@
+
+.form-control:focus {
+    box-shadow: 0 0 0 0.25rem rgb(115 130 153 / 25%);
+    border: 1px solid rgb(115 130 153 / 50%);
+}
+
+.btn-close {
+    outline: none;
+    box-shadow: none;
+}
+
+.btn-close:focus {
+    outline: none;
+    box-shadow: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+}

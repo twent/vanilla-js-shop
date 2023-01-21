@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/reset-bootstrap.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <script src="./js/catalog.js" defer></script>
+    <title>Mi Shop</title>
+</head>
+
+<body>
+    <div class="page-wrapper">
+        <header class="pt-3 pb-3">
+            <div class="container">
+                <div class="row">
+                    <div class="col d-flex align-items-center justify-content-start">
+                        <a href="/">
+                            <img src="/images/icon/mi-logo-text.svg" alt="logo">
+                        </a>
+                    </div>
+                    <div class="col d-flex align-items-center justify-content-end">
+                        <button type="button" class="btn btn-primary btn-dark ms-2" id="open-auth-btn">
+                            <div class="d-flex align-items-center">
+                                <img class="pe-2" src="/images/icon/user.svg" alt="login">
+                                Войти
+                            </div>
+                        </button>
+
+                        <button type="button" class="btn btn-outline-dark ms-2 d-none" id="open-cart-btn">
+                            <div class="d-flex align-items-center">
+                                <img class="pe-2" src="/images/icon/shopping-cart.svg" alt="login">
+                                Корзина
+                            </div>
+                        </button>
+
+                        <button type="button" class="btn btn-primary btn-dark ms-2 d-none" id="logout-btn">
+                            <div class="d-flex align-items-center">
+                                Выйти
+                            </div>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <main>
+            <section class="pb-5">
+                <div class="container">
+                    <div class="row mb-4">
+                        <div class="col col-12 col-md-6 d-flex align-items-center mb-3 mb-md-0">
+                            <h2>Каталог</h2>
+                        </div>
+                        <div
+                            class="col col-12 col-md-6 d-flex align-items-center justify-content-start justify-content-md-end">
+                            <input class="catalog-search form-control form-control-md" type="text">
+                        </div>
+                    </div>
+
+                    <div class="row" id="products-container">
+                        <div class="col col-12 col-sm-6 col-lg-4 col-xl-3 mb-3">
+                            <a href="#" class="card-link">
+                                <div class="card">
+                                    <img src="/images/phones/phone-1.jpg" class="card-img-top" alt="phone-1">
+                                    <div class="card-body">
+                                        <span class="mb-2 d-block text-secondary">Смартфон</span>
+                                        <h6 class="card-title mb-3">Xiaomi Redmi A1+ 2/32GB (голубой)</h6>
+
+                                        <div class="row">
+                                            <div class="col d-flex align-itemns-center justify-content-between">
+                                                <h4>4 990 ₽</h4>
+                                                <button type="button" class="btn btn-outline-dark">
+                                                    <img src="/images/icon/shopping-cart-big.svg" alt="login">
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+
+                        <div class="col col-12 col-sm-6 col-lg-4 col-xl-3 mb-3">
+                            <a href="#" class="card-link">
+                                <div class="card">
+                                    <img src="/images/phones/phone-1.jpg" class="card-img-top" alt="phone-1">
+                                    <div class="card-body">
+                                        <span class="mb-2 d-block text-secondary">Смартфон</span>
+                                        <h6 class="card-title mb-3">Xiaomi Redmi A1+ 2/32GB (голубой)</h6>
+
+                                        <div class="row">
+                                            <div class="col d-flex align-itemns-center justify-content-between">
+                                                <h4>4 990 ₽</h4>
+                                                <button type="button" class="btn btn-outline-dark">
+                                                    <img src="/images/icon/shopping-cart-big.svg" alt="login">
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+
+                        <div class="col col-12 col-sm-6 col-lg-4 col-xl-3 mb-3">
+                            <a href="#" class="card-link">
+                                <div class="card">
+                                    <img src="/images/phones/phone-1.jpg" class="card-img-top" alt="phone-1">
+                                    <div class="card-body">
+                                        <span class="mb-2 d-block text-secondary">Смартфон</span>
+                                        <h6 class="card-title mb-3">Xiaomi Redmi A1+ 2/32GB (голубой)</h6>
+
+                                        <div class="row">
+                                            <div class="col d-flex align-itemns-center justify-content-between">
+                                                <h4>4 990 ₽</h4>
+                                                <button type="button" class="btn btn-outline-dark">
+                                                    <img src="/images/icon/shopping-cart-big.svg" alt="login">
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+
+                        <div class="col col-12 col-sm-6 col-lg-4 col-xl-3 mb-3">
+                            <a href="#" class="card-link">
+                                <div class="card">
+                                    <img src="/images/phones/phone-1.jpg" class="card-img-top" alt="phone-1">
+                                    <div class="card-body">
+                                        <span class="mb-2 d-block text-secondary">Смартфон</span>
+                                        <h6 class="card-title mb-3">Xiaomi Redmi A1+ 2/32GB (голубой)</h6>
+
+                                        <div class="row">
+                                            <div class="col d-flex align-itemns-center justify-content-between">
+                                                <h4>4 990 ₽</h4>
+                                                <button type="button" class="btn btn-outline-dark">
+                                                    <img src="/images/icon/shopping-cart-big.svg" alt="login">
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+
+                        <!-- <div class="col col-12 col-sm-6 col-lg-4 col-xl-3 mb-3">
+                            <a href="#" class="card-link">
+                                <div class="card">
+                                    <img src="/images/accessory/accessory-1.jpg" class="card-img-top" alt="phone-1">
+                                    <div class="card-body">
+                                        <span class="mb-2 d-block text-secondary">Чехол</span>
+                                        <h6 class="card-title mb-3">Red Line Ultimate для Xiaomi Redmi 9C (оранжевый)</h6>
+
+                                        <div class="row">
+                                            <div class="col d-flex align-itemns-center justify-content-between">
+                                                <h4>290 ₽</h4>
+                                                <button type="button" class="btn btn-outline-dark">
+                                                    <img src="/images/icon/shopping-cart-big.svg" alt="login">
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+
+                        <div class="col col-12 col-sm-6 col-lg-4 col-xl-3 mb-3">
+                            <a href="#" class="card-link">
+                                <div class="card">
+                                    <img src="/images/accessory/accessory-1.jpg" class="card-img-top" alt="phone-1">
+                                    <div class="card-body">
+                                        <span class="mb-2 d-block text-secondary">Чехол</span>
+                                        <h6 class="card-title mb-3">Red Line Ultimate для Xiaomi Redmi 9C (оранжевый)</h6>
+
+                                        <div class="row">
+                                            <div class="col d-flex align-itemns-center justify-content-between">
+                                                <h4>290 ₽</h4>
+                                                <button type="button" class="btn btn-outline-dark">
+                                                    <img src="/images/icon/shopping-cart-big.svg" alt="login">
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+
+                        <div class="col col-12 col-sm-6 col-lg-4 col-xl-3 mb-3">
+                            <a href="#" class="card-link">
+                                <div class="card">
+                                    <img src="/images/accessory/accessory-1.jpg" class="card-img-top" alt="phone-1">
+                                    <div class="card-body">
+                                        <span class="mb-2 d-block text-secondary">Чехол</span>
+                                        <h6 class="card-title mb-3">Red Line Ultimate для Xiaomi Redmi 9C (оранжевый)</h6>
+
+                                        <div class="row">
+                                            <div class="col d-flex align-itemns-center justify-content-between">
+                                                <h4>290 ₽</h4>
+                                                <button type="button" class="btn btn-outline-dark">
+                                                    <img src="/images/icon/shopping-cart-big.svg" alt="login">
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+
+                        <div class="col col-12 col-sm-6 col-lg-4 col-xl-3 mb-3">
+                            <a href="#" class="card-link">
+                                <div class="card">
+                                    <img src="/images/accessory/accessory-1.jpg" class="card-img-top" alt="phone-1">
+                                    <div class="card-body">
+                                        <span class="mb-2 d-block text-secondary">Чехол</span>
+                                        <h6 class="card-title mb-3">Red Line Ultimate для Xiaomi Redmi 9C (оранжевый)</h6>
+
+                                        <div class="row">
+                                            <div class="col d-flex align-itemns-center justify-content-between">
+                                                <h4>290 ₽</h4>
+                                                <button type="button" class="btn btn-outline-dark">
+                                                    <img src="/images/icon/shopping-cart-big.svg" alt="login">
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+
+                        <div class="col col-12 col-sm-6 col-lg-4 col-xl-3 mb-3">
+                            <a href="#" class="card-link">
+                                <div class="card">
+                                    <img src="/images/usage/usage-1.jpg" class="card-img-top" alt="phone-1">
+                                    <div class="card-body">
+                                        <span class="mb-2 d-block text-secondary">Умные часы</span>
+                                        <h6 class="card-title mb-3">Amazfit GTS 4 mini (черный)</h6>
+
+                                        <div class="row">
+                                            <div class="col d-flex align-itemns-center justify-content-between">
+                                                <h4>7 490 ₽</h4>
+                                                <button type="button" class="btn btn-outline-dark">
+                                                    <img src="/images/icon/shopping-cart-big.svg" alt="login">
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+
+                        <div class="col col-12 col-sm-6 col-lg-4 col-xl-3 mb-3">
+                            <a href="#" class="card-link">
+                                <div class="card">
+                                    <img src="/images/usage/usage-1.jpg" class="card-img-top" alt="phone-1">
+                                    <div class="card-body">
+                                        <span class="mb-2 d-block text-secondary">Умные часы</span>
+                                        <h6 class="card-title mb-3">Amazfit GTS 4 mini (черный)</h6>
+
+                                        <div class="row">
+                                            <div class="col d-flex align-itemns-center justify-content-between">
+                                                <h4>7 490 ₽</h4>
+                                                <button type="button" class="btn btn-outline-dark">
+                                                    <img src="/images/icon/shopping-cart-big.svg" alt="login">
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+
+                        <div class="col col-12 col-sm-6 col-lg-4 col-xl-3 mb-3">
+                            <a href="#" class="card-link">
+                                <div class="card">
+                                    <img src="/images/usage/usage-1.jpg" class="card-img-top" alt="phone-1">
+                                    <div class="card-body">
+                                        <span class="mb-2 d-block text-secondary">Умные часы</span>
+                                        <h6 class="card-title mb-3">Amazfit GTS 4 mini (черный)</h6>
+
+                                        <div class="row">
+                                            <div class="col d-flex align-itemns-center justify-content-between">
+                                                <h4>7 490 ₽</h4>
+                                                <button type="button" class="btn btn-outline-dark">
+                                                    <img src="/images/icon/shopping-cart-big.svg" alt="login">
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+
+                        <div class="col col-12 col-sm-6 col-lg-4 col-xl-3 mb-3">
+                            <a href="#" class="card-link">
+                                <div class="card">
+                                    <img src="/images/usage/usage-1.jpg" class="card-img-top" alt="phone-1">
+                                    <div class="card-body">
+                                        <span class="mb-2 d-block text-secondary">Умные часы</span>
+                                        <h6 class="card-title mb-3">Amazfit GTS 4 mini (черный)</h6>
+
+                                        <div class="row">
+                                            <div class="col d-flex align-itemns-center justify-content-between">
+                                                <h4>7 490 ₽</h4>
+                                                <button type="button" class="btn btn-outline-dark">
+                                                    <img src="/images/icon/shopping-cart-big.svg" alt="login">
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div> -->
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer class="pb-5 pt-5">
+            <div class="container">
+                <div class="row">
+                    <div class="col d-flex align-items-center justify-content-start">
+                        <a href="/">
+                            <img src="/images/icon/mi-logo-text.svg" alt="logo">
+                        </a>
+                    </div>
+                    <div class="col d-flex align-items-center justify-content-end">
+                        <ul class="social-links d-flex align-items-center p-0 m-0">
+                            <li class="d-flex align-items-center justify-content-center">
+                                <a href="#" class="p-2">
+                                    <img src="/images/social/fb.svg" alt="fb">
+                                </a>
+                            </li>
+                            <li class="d-flex align-items-center justify-content-center">
+                                <a href="#" class="p-2">
+                                    <img src="/images/social/instagram.svg" alt="instagram">
+                                </a>
+                            </li>
+                            <li class="d-flex align-items-center justify-content-center">
+                                <a href="#" class="p-2">
+                                    <img src="/images/social/vk.svg" alt="vk">
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <!-- For open -->
+    <!-- class="modal fade show" style="display: block;" -->
+    <!-- <div class="modal-backdrop fade show"></div> -->
+    <!-- <body style="overflow: hidden; padding-right: 0px;"> -->
+    <div class="modal fade" id="auth-modal">
+        <div class="modal-dialog modal-dialog-centered modal-sm">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Вход</h5>
+                    <button type="button" class="btn-close close-btn" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form action="#">
+                        <label for="login-control" class="col-form-label">Логин:</label>
+                        <input class="form-control mb-3" type="text" id="login-control">
+                        <label for="password-control" class="col-form-label">Пароль:</label>
+                        <input class="form-control mb-3" type="text" id="password-control">
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-outline-dark close-btn" data-bs-dismiss="modal">Отмена</button>
+                    <button type="button" class="btn btn-dark login-btn">Войти</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="cart-modal">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Корзина</h5>
+                    <button type="button" class="btn-close close-btn" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body cart-modal-body">
+                    <div class="container-fluid" id="cart-container">
+
+                        <!-- <div class="row border-bottom pb-3 pt-3">
+                            <div class="col col-12 col-md-6 mb-3 mb-md-0 fs-4">
+                                Смартфон
+                            </div>
+                            <div
+                                class="col col-12 col-md-6 fs-4 d-flex align-items-center justify-content-end flex-wrap">
+                                <h4 class="me-3 d-flex align-itemns-center">1200 ₽</h4>
+                                <button type="button" class="btn btn-outline-dark btn-sm cart-item-controls"
+                                    id="control-dec">
+                                    -
+                                </button>
+                                <h6 class="cart-item-count me-3 ms-3">1</h6>
+                                <button type="button" class="btn btn-outline-dark btn-sm cart-item-controls"
+                                    id="control-inc">
+                                    +
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="row border-bottom pb-3 pt-3">
+                            <div class="col col-12 col-md-6 mb-3 mb-md-0 fs-4">
+                                Смартфон
+                            </div>
+                            <div
+                                class="col col-12 col-md-6 fs-4 d-flex align-items-center justify-content-end flex-wrap">
+                                <h4 class="me-3 d-flex align-itemns-center">1200 ₽</h4>
+                                <button type="button" class="btn btn-outline-dark btn-sm cart-item-controls"
+                                    id="control-dec">
+                                    -
+                                </button>
+                                <h6 class="cart-item-count me-3 ms-3">1</h6>
+                                <button type="button" class="btn btn-outline-dark btn-sm cart-item-controls"
+                                    id="control-inc">
+                                    +
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="row border-bottom pb-3 pt-3">
+                            <div class="col col-12 col-md-6 mb-3 mb-md-0 fs-4">
+                                Смартфон
+                            </div>
+                            <div
+                                class="col col-12 col-md-6 fs-4 d-flex align-items-center justify-content-end flex-wrap">
+                                <h4 class="me-3 d-flex align-itemns-center">1200 ₽</h4>
+                                <button type="button" class="btn btn-outline-dark btn-sm cart-item-controls"
+                                    id="control-dec">
+                                    -
+                                </button>
+                                <h6 class="cart-item-count me-3 ms-3">1</h6>
+                                <button type="button" class="btn btn-outline-dark btn-sm cart-item-controls"
+                                    id="control-inc">
+                                    +
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="row border-bottom pb-3 pt-3">
+                            <div class="col col-12 col-md-6 mb-3 mb-md-0 fs-4">
+                                Смартфон
+                            </div>
+                            <div
+                                class="col col-12 col-md-6 fs-4 d-flex align-items-center justify-content-end flex-wrap">
+                                <h4 class="me-3 d-flex align-itemns-center">1200 ₽</h4>
+                                <button type="button" class="btn btn-outline-dark btn-sm cart-item-controls"
+                                    id="control-dec">
+                                    -
+                                </button>
+                                <h6 class="cart-item-count me-3 ms-3">1</h6>
+                                <button type="button" class="btn btn-outline-dark btn-sm cart-item-controls"
+                                    id="control-inc">
+                                    +
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="row border-bottom pb-3 pt-3">
+                            <div class="col col-12 col-md-6 mb-3 mb-md-0 fs-4">
+                                Смартфон
+                            </div>
+                            <div
+                                class="col col-12 col-md-6 fs-4 d-flex align-items-center justify-content-end flex-wrap">
+                                <h4 class="me-3 d-flex align-itemns-center">1200 ₽</h4>
+                                <button type="button" class="btn btn-outline-dark btn-sm cart-item-controls"
+                                    id="control-dec">
+                                    -
+                                </button>
+                                <h6 class="cart-item-count me-3 ms-3">1</h6>
+                                <button type="button" class="btn btn-outline-dark btn-sm cart-item-controls"
+                                    id="control-inc">
+                                    +
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="row border-bottom pb-3 pt-3">
+                            <div class="col col-12 col-md-6 mb-3 mb-md-0 fs-4">
+                                Смартфон
+                            </div>
+                            <div
+                                class="col col-12 col-md-6 fs-4 d-flex align-items-center justify-content-end flex-wrap">
+                                <h4 class="me-3 d-flex align-itemns-center">1200 ₽</h4>
+                                <button type="button" class="btn btn-outline-dark btn-sm cart-item-controls"
+                                    id="control-dec">
+                                    -
+                                </button>
+                                <h6 class="cart-item-count me-3 ms-3">1</h6>
+                                <button type="button" class="btn btn-outline-dark btn-sm cart-item-controls"
+                                    id="control-inc">
+                                    +
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="row border-bottom pb-3 pt-3">
+                            <div class="col col-12 col-md-6 mb-3 mb-md-0 fs-4">
+                                Смартфон
+                            </div>
+                            <div
+                                class="col col-12 col-md-6 fs-4 d-flex align-items-center justify-content-end flex-wrap">
+                                <h4 class="me-3 d-flex align-itemns-center">1200 ₽</h4>
+                                <button type="button" class="btn btn-outline-dark btn-sm cart-item-controls"
+                                    id="control-dec">
+                                    -
+                                </button>
+                                <h6 class="cart-item-count me-3 ms-3">1</h6>
+                                <button type="button" class="btn btn-outline-dark btn-sm cart-item-controls"
+                                    id="control-inc">
+                                    +
+                                </button>
+                            </div>
+                        </div> -->
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <div class="badge bg-dark cart-totlal-price__wrapper">
+                        <h4 id="cart-totlal-price">1200 ₽</h4>
+                    </div>
+                    <button type="button" class="btn btn-dark">Оформить заказ</button>
+                    <button type="button" class="btn btn-outline-dark me-2 close-btn" data-bs-dismiss="modal">Отмена</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

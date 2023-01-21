@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/reset-bootstrap.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <title>Mi Shop Auth</title>
+</head>
+<body>
+    <div class="modal fade show" id="auth-modal" style="display: block;">
+        <div class="modal-dialog modal-dialog-centered modal-sm">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Личный кабинет</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form action="#">
+                        <label for="login-control" class="col-form-label">Логин:</label>
+                        <input class="form-control mb-3" type="text" id="login-control">
+                        <label for="password-control" class="col-form-label">Пароль:</label>
+                        <input class="form-control mb-3" type="text" id="password-control">
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-outline-dark" data-bs-dismiss="modal">Отмена</button>
+                    <button type="button" class="btn btn-dark">Войти</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
