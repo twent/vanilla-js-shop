@@ -1,16 +1,19 @@
 import { get } from './api'
-import { findIdBySlug } from './categories'
+import { findBySlug } from './categories'
 import { Rubbles } from './utils'
 
+let catalogTitleElement = document.getElementById('catalog-title')
 let params = new URLSearchParams(window.location.search)
 let categorySlug = params.get('slug')
-let categoryId = findIdBySlug(categorySlug)
-let path = categoryId ? `/products?categoryId=${categoryId}` : '/products'
+let category = findBySlug(categorySlug)
+let path = category ? `/products?categoryId=${category.id}` : '/products'
+let catalogTitle = category ? category.title : 'Каталог'
 //let path = categorySlug ? `/products?category.slug=${categorySlug}&_expand=category` : '/products'
 
 export let renderProducts = async () => {
     let data = await get(path)
-    
+
+    catalogTitleElement.textContent = catalogTitle
     data && render(data)
 }
 

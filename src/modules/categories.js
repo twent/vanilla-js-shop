@@ -11,14 +11,14 @@ export const Categories = Object.freeze({
     SMART_DEVICES: { id: 3, slug: "smart-devices" ,title: "Умные устройства" }
 })
 
-export const findIdBySlug = (slug) => {
+export const findBySlug = (slug) => {
     switch (slug) {
         case Categories.PHONES.slug:
-            return Categories.PHONES.id
+            return Categories.PHONES
         case Categories.ACCESSORIES.slug:
-            return Categories.ACCESSORIES.id
+            return Categories.ACCESSORIES
         case Categories.SMART_DEVICES.slug:
-            return Categories.SMART_DEVICES.id
+            return Categories.SMART_DEVICES
         default:
             return null
     }
