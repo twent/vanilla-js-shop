@@ -161,11 +161,20 @@
                     <button type="button" class="btn-close close-btn" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                    <form action="#" method="get" id="login-form">
-                        <label for="login-control" class="col-form-label">Логин:</label>
-                        <input name="login" class="form-control mb-3" type="text" id="login-control" required>
+                    <form class="needs-validation" action="#" method="get" id="login-form" novalidate>
+                        <div class="form-group">
+                            <label for="login-control" class="col-form-label">Логин:</label>
+                            <input name="login" class="form-control mb-3" type="text" id="login" minlength="5" maxlength="24" aria-describedby="login-error" required>
+                            <div class="invalid-feedback" id="login-error">
+                                Неверные данные!
+                            </div>
+                        </div>
+
                         <label for="password-control" class="col-form-label">Пароль:</label>
-                        <input name="password" class="form-control mb-3" type="password" id="password-control" required>
+                        <input name="password" class="form-control mb-3" type="password" id="password" minlength="8" maxlength="128" aria-describedby="password-error"  required>
+                        <div class="invalid-feedback" id="password-error">
+                            Неверные данные!
+                        </div>
                     </form>
                 </div>
                 <div class="modal-footer">

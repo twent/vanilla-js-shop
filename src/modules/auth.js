@@ -1,3 +1,4 @@
+import { get } from './api'
 import { openModal, closeModal } from "./modals"
 
 export let auth = () => {
@@ -6,20 +7,73 @@ export let auth = () => {
     let loginBtn = authModal.querySelector('.login-btn')
     let logoutBtn = document.getElementById('logout-btn')
     let openCartBtn = document.getElementById('open-cart-btn')
+    
+    let loginForm = authModal.querySelector('#login-form')
+    let loginInput = document.getElementById("login")
+    let passwordInput = document.getElementById("password")
 
     let checkAuth = () => {
         let authData = JSON.parse(localStorage.getItem('authData'))
 
-        if (authData) {
-            login()
+        authData && checkAuthData(authData)
+    }
+
+    async function validateLoginForm(loginForm) {
+        let loginFormData = new FormData(loginForm)
+
+        let loginValue = loginFormData.get('login')
+        let passwordValue = loginFormData.get('password')
+        let authData = {}
+
+        if (loginValue && passwordValue) {
+            authData = {
+                login: loginValue,
+                password: passwordValue,
+            }
+
+            await checkAuthData(authData)
+        } else {
+            showLoginFormErrors()
+            return alert('Введите данные для входа')
         }
     }
 
-    let login = () => {
+    let showLoginFormErrors = () => {
+        loginInput.classList.add('is-invalid')
+        passwordInput.classList.add('is-invalid')
+        loginForm.classList.add('was-validated')
+    }
+
+    let resetLoginFormErrors = () => {
+        loginInput.classList.remove('is-invalid')
+        passwordInput.classList.remove('is-invalid')
+        loginForm.classList.remove('was-validated')
+    }
+
+    async function checkAuthData(authData) {
+        let userData = await get('/profile')
+
+        if (
+            (userData.login && userData.login == authData.login) &&
+            (userData.password && userData.password == authData.password)
+        ) {
+            resetLoginFormErrors()
+            localStorage.setItem('authData', JSON.stringify(userData))
+
+            successLoginDomActions()
+        } else {
+            showLoginFormErrors()
+
+            return alert('Неверные данные для входа')
+        }
+    }
+
+    let successLoginDomActions = () => {
         authBtn.classList.add('d-none')
 
         logoutBtn.classList.remove('d-none')
         openCartBtn.classList.remove('d-none')
+        
         closeModal(authModal)
     }
 
@@ -34,27 +88,8 @@ export let auth = () => {
 
     authBtn.addEventListener('click', () => openModal(authModal))
 
-    loginBtn.addEventListener('click', () => {
-        let loginForm = authModal.querySelector('#login-form')
-        let loginFormData = new FormData(loginForm)
-
-        let loginValue = loginFormData.get('login')
-        let passwordValue = loginFormData.get('password')
-
-        if (loginValue && passwordValue) {
-            let authData = {
-                login: loginValue,
-                password: passwordValue,
-            }
-        
-            localStorage.setItem('authData', JSON.stringify(authData))
-        
-            login()
-
-            return
-        }
-
-        alert('Введите данные для входа')
+    loginBtn.addEventListener('click', async () => {
+        await validateLoginForm(loginForm)
     })
 
     logoutBtn.addEventListener('click', logout)

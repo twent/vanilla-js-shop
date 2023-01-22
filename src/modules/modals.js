@@ -16,12 +16,12 @@ export let openModal = (modal) => {
 export let closeModal = (modal) => {
     let backdrop = document.querySelector('.modal-backdrop')
 
-    backdrop.classList.remove('show')
     modal.classList.remove('show')
+    backdrop && backdrop.classList.remove('show')
     
     setTimeout(() => {
         modal.classList.remove('d-block')
-        backdrop.remove()
+        backdrop && backdrop.remove()
     }, 500)
 }
 
