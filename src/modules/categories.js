@@ -1,6 +1,30 @@
 import { get } from "./api"
 
-export let categories = async () => {
+/**
+ * Enum for categories.
+ * @readonly
+ * @enum {{id: int, slug: string, title: string}}
+ */
+export const Categories = Object.freeze({
+    PHONES:   { id: 1, slug: "phones" ,title: "Смартфоны" },
+    ACCESSORIES:  { id: 2, slug: "accessories" ,title: "Аксессуары" },
+    SMART_DEVICES: { id: 3, slug: "smart-devices" ,title: "Умные устройства" }
+})
+
+export const findIdBySlug = (slug) => {
+    switch (slug) {
+        case Categories.PHONES.slug:
+            return Categories.PHONES.id
+        case Categories.ACCESSORIES.slug:
+            return Categories.ACCESSORIES.id
+        case Categories.SMART_DEVICES.slug:
+            return Categories.SMART_DEVICES.id
+        default:
+            return null
+    }
+}
+
+export let renderCategories = async () => {
     let data = await get('/categories')
 
     data && render(data)

@@ -14,13 +14,186 @@
       "id": 2,
       "slug": "accessories",
       "title": "Аксессуары",
-      "preview": "/images/accessory/preview.jpg"
+      "preview": "/images/accessories/preview.jpg"
     },
     {
       "id": 3,
       "slug": "smart-devices",
       "title": "Умные устройства",
-      "preview": "/images/usage/preview.jpg"
+      "preview": "/images/smart-devices/preview.jpg"
+    }
+  ],
+  "products": [
+    {
+      "id": 1,
+      "categoryId": 1,
+      "subcategory": "Смартфон",
+      "slug": "xiaomi-redmi-a1-2-32-light-blue",
+      "title": "Xiaomi Redmi A1+ 2/32GB (голубой)",
+      "preview": "/images/phones/phone-1.jpg",
+      "price": 4990
+    },
+    {
+      "id": 2,
+      "categoryId": 1,
+      "subcategory": "Смартфон",
+      "slug": "xiaomi-redmi-a1-2-32-light-blue-2",
+      "title": "Xiaomi Redmi A1+ 2/32GB (голубой)",
+      "preview": "/images/phones/phone-1.jpg",
+      "price": 7990
+    },
+    {
+      "id": 3,
+      "categoryId": 1,
+      "subcategory": "Смартфон",
+      "slug": "xiaomi-redmi-a1-2-32-light-blue-3",
+      "title": "Xiaomi Redmi A1+ 2/32GB (голубой)",
+      "preview": "/images/phones/phone-1.jpg",
+      "price": 6990
+    },
+    {
+      "id": 4,
+      "categoryId": 1,
+      "subcategory": "Смартфон",
+      "slug": "xiaomi-redmi-a1-2-32-light-blue-4",
+      "title": "Xiaomi Redmi A1+ 2/32GB (голубой)",
+      "preview": "/images/phones/phone-1.jpg",
+      "price": 8990
+    },
+    {
+      "id": 5,
+      "categoryId": 1,
+      "subcategory": "Смартфон",
+      "slug": "xiaomi-redmi-a1-2-32-light-blue-5",
+      "title": "Xiaomi Redmi A1+ 2/32GB (голубой)",
+      "preview": "/images/phones/phone-1.jpg",
+      "price": 5990
+    },
+    {
+      "id": 6,
+      "categoryId": 1,
+      "subcategory": "Смартфон",
+      "slug": "xiaomi-redmi-a1-2-32-light-blue-6",
+      "title": "Xiaomi Redmi A1+ 2/32GB (голубой)",
+      "preview": "/images/phones/phone-1.jpg",
+      "price": 3990
+    },
+    {
+      "id": 7,
+      "categoryId": 2,
+      "subcategory": "Чехол",
+      "slug": "red-line-ultimate-for-xiaomi-redmi-9c",
+      "title": "Red Line Ultimate для Xiaomi Redmi 9C (оранжевый)",
+      "preview": "/images/accessories/accessory-1.jpg",
+      "price": 490
+    },
+    {
+      "id": 8,
+      "categoryId": 2,
+      "subcategory": "Чехол",
+      "slug": "red-line-ultimate-for-xiaomi-redmi-9c-2",
+      "title": "Red Line Ultimate для Xiaomi Redmi 9C (оранжевый)",
+      "preview": "/images/accessories/accessory-1.jpg",
+      "price": 290
+    },
+    {
+      "id": 9,
+      "categoryId": 2,
+      "subcategory": "Чехол",
+      "slug": "red-line-ultimate-for-xiaomi-redmi-9c-3",
+      "title": "Red Line Ultimate для Xiaomi Redmi 9C (оранжевый)",
+      "preview": "/images/accessories/accessory-1.jpg",
+      "price": 390
+    },
+    {
+      "id": 10,
+      "categoryId": 2,
+      "subcategory": "Чехол",
+      "slug": "red-line-ultimate-for-xiaomi-redmi-9c-4",
+      "title": "Red Line Ultimate для Xiaomi Redmi 9C (оранжевый)",
+      "preview": "/images/accessories/accessory-1.jpg",
+      "price": 190
+    },
+    {
+      "id": 11,
+      "categoryId": 2,
+      "subcategory": "Чехол",
+      "slug": "red-line-ultimate-for-xiaomi-redmi-9c-5",
+      "title": "Red Line Ultimate для Xiaomi Redmi 9C (оранжевый)",
+      "preview": "/images/accessories/accessory-1.jpg",
+      "price": 790
+    },
+    {
+      "id": 12,
+      "categoryId": 2,
+      "subcategory": "Чехол",
+      "slug": "red-line-ultimate-for-xiaomi-redmi-9c-6",
+      "title": "Red Line Ultimate для Xiaomi Redmi 9C (оранжевый)",
+      "preview": "/images/accessories/accessory-1.jpg",
+      "price": 250
+    },
+    {
+      "id": 13,
+      "categoryId": 2,
+      "subcategory": "Чехол",
+      "slug": "red-line-ultimate-for-xiaomi-redmi-9c-7",
+      "title": "Red Line Ultimate для Xiaomi Redmi 9C (оранжевый)",
+      "preview": "/images/accessories/accessory-1.jpg",
+      "price": 990
+    },
+    {
+      "id": 14,
+      "categoryId": 3,
+      "subcategory": "Умные часы",
+      "slug": "amazfit-gts-4-mini-black",
+      "title": "Amazfit GTS 4 mini (черный)",
+      "preview": "/images/smart-devices/smart-device-1.jpg",
+      "price": 990
+    },
+    {
+      "id": 15,
+      "categoryId": 3,
+      "subcategory": "Умные часы",
+      "slug": "amazfit-gts-4-mini-black-2",
+      "title": "Amazfit GTS 4 mini (черный)",
+      "preview": "/images/smart-devices/smart-device-1.jpg",
+      "price": 2790
+    },
+    {
+      "id": 16,
+      "categoryId": 3,
+      "subcategory": "Умные часы",
+      "slug": "amazfit-gts-4-mini-black-3",
+      "title": "Amazfit GTS 4 mini (черный)",
+      "preview": "/images/smart-devices/smart-device-1.jpg",
+      "price": 2990
+    },
+    {
+      "id": 17,
+      "categoryId": 3,
+      "subcategory": "Умные часы",
+      "slug": "amazfit-gts-4-mini-black-4",
+      "title": "Amazfit GTS 4 mini (черный)",
+      "preview": "/images/smart-devices/smart-device-1.jpg",
+      "price": 3990
+    },
+    {
+      "id": 18,
+      "categoryId": 3,
+      "subcategory": "Умные часы",
+      "slug": "amazfit-gts-4-mini-black-5",
+      "title": "Amazfit GTS 4 mini (черный)",
+      "preview": "/images/smart-devices/smart-device-1.jpg",
+      "price": 4590
+    },
+    {
+      "id": 19,
+      "categoryId": 3,
+      "subcategory": "Умные часы",
+      "slug": "amazfit-gts-4-mini-black-6",
+      "title": "Amazfit GTS 4 mini (черный)",
+      "preview": "/images/smart-devices/smart-device-1.jpg",
+      "price": 7490
     }
   ]
 }
