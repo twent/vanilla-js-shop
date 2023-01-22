@@ -31,7 +31,8 @@
       "slug": "xiaomi-redmi-a1-2-32-light-blue",
       "title": "Xiaomi Redmi A1+ 2/32GB (голубой)",
       "preview": "/images/phones/phone-1.jpg",
-      "price": 4990
+      "price": 4990,
+      "createdAt": "2023-01-23 00:20:20"
     },
     {
       "id": 2,
@@ -40,7 +41,8 @@
       "slug": "xiaomi-redmi-a1-2-32-light-blue-2",
       "title": "Xiaomi Redmi A1+ 2/32GB (голубой)",
       "preview": "/images/phones/phone-1.jpg",
-      "price": 7990
+      "price": 7990,
+      "createdAt": "2023-01-23 00:20:20"
     },
     {
       "id": 3,
@@ -49,7 +51,8 @@
       "slug": "xiaomi-redmi-a1-2-32-light-blue-3",
       "title": "Xiaomi Redmi A1+ 2/32GB (голубой)",
       "preview": "/images/phones/phone-1.jpg",
-      "price": 6990
+      "price": 6990,
+      "createdAt": "2023-01-23 00:20:20"
     },
     {
       "id": 4,
@@ -58,7 +61,8 @@
       "slug": "xiaomi-redmi-a1-2-32-light-blue-4",
       "title": "Xiaomi Redmi A1+ 2/32GB (голубой)",
       "preview": "/images/phones/phone-1.jpg",
-      "price": 8990
+      "price": 8990,
+      "createdAt": "2023-01-23 00:20:20"
     },
     {
       "id": 5,
@@ -67,7 +71,8 @@
       "slug": "xiaomi-redmi-a1-2-32-light-blue-5",
       "title": "Xiaomi Redmi A1+ 2/32GB (голубой)",
       "preview": "/images/phones/phone-1.jpg",
-      "price": 5990
+      "price": 5990,
+      "createdAt": "2023-01-23 00:20:20"
     },
     {
       "id": 6,
@@ -76,7 +81,8 @@
       "slug": "xiaomi-redmi-a1-2-32-light-blue-6",
       "title": "Xiaomi Redmi A1+ 2/32GB (голубой)",
       "preview": "/images/phones/phone-1.jpg",
-      "price": 3990
+      "price": 3990,
+      "createdAt": "2023-01-23 00:20:20"
     },
     {
       "id": 7,
@@ -85,7 +91,8 @@
       "slug": "red-line-ultimate-for-xiaomi-redmi-9c",
       "title": "Red Line Ultimate для Xiaomi Redmi 9C (оранжевый)",
       "preview": "/images/accessories/accessory-1.jpg",
-      "price": 490
+      "price": 490,
+      "createdAt": "2023-01-23 00:20:20"
     },
     {
       "id": 8,
@@ -94,7 +101,8 @@
       "slug": "red-line-ultimate-for-xiaomi-redmi-9c-2",
       "title": "Red Line Ultimate для Xiaomi Redmi 9C (оранжевый)",
       "preview": "/images/accessories/accessory-1.jpg",
-      "price": 290
+      "price": 290,
+      "createdAt": "2023-01-23 00:20:20"
     },
     {
       "id": 9,
@@ -103,7 +111,8 @@
       "slug": "red-line-ultimate-for-xiaomi-redmi-9c-3",
       "title": "Red Line Ultimate для Xiaomi Redmi 9C (оранжевый)",
       "preview": "/images/accessories/accessory-1.jpg",
-      "price": 390
+      "price": 390,
+      "createdAt": "2023-01-23 00:20:20"
     },
     {
       "id": 10,
@@ -112,7 +121,8 @@
       "slug": "red-line-ultimate-for-xiaomi-redmi-9c-4",
       "title": "Red Line Ultimate для Xiaomi Redmi 9C (оранжевый)",
       "preview": "/images/accessories/accessory-1.jpg",
-      "price": 190
+      "price": 190,
+      "createdAt": "2023-01-23 00:20:20"
     },
     {
       "id": 11,
@@ -121,7 +131,8 @@
       "slug": "red-line-ultimate-for-xiaomi-redmi-9c-5",
       "title": "Red Line Ultimate для Xiaomi Redmi 9C (оранжевый)",
       "preview": "/images/accessories/accessory-1.jpg",
-      "price": 790
+      "price": 790,
+      "createdAt": "2023-01-23 00:20:20"
     },
     {
       "id": 12,
@@ -130,7 +141,8 @@
       "slug": "red-line-ultimate-for-xiaomi-redmi-9c-6",
       "title": "Red Line Ultimate для Xiaomi Redmi 9C (оранжевый)",
       "preview": "/images/accessories/accessory-1.jpg",
-      "price": 250
+      "price": 250,
+      "createdAt": "2023-01-23 00:20:20"
     },
     {
       "id": 13,
@@ -139,7 +151,8 @@
       "slug": "red-line-ultimate-for-xiaomi-redmi-9c-7",
       "title": "Red Line Ultimate для Xiaomi Redmi 9C (оранжевый)",
       "preview": "/images/accessories/accessory-1.jpg",
-      "price": 990
+      "price": 990,
+      "createdAt": "2023-01-23 00:20:20"
     },
     {
       "id": 14,
@@ -148,7 +161,8 @@
       "slug": "amazfit-gts-4-mini-black",
       "title": "Amazfit GTS 4 mini (черный)",
       "preview": "/images/smart-devices/smart-device-1.jpg",
-      "price": 990
+      "price": 990,
+      "createdAt": "2023-01-23 00:20:20"
     },
     {
       "id": 15,
@@ -157,7 +171,8 @@
       "slug": "amazfit-gts-4-mini-black-2",
       "title": "Amazfit GTS 4 mini (черный)",
       "preview": "/images/smart-devices/smart-device-1.jpg",
-      "price": 2790
+      "price": 2790,
+      "createdAt": "2023-01-23 00:20:20"
     },
     {
       "id": 16,
@@ -166,7 +181,8 @@
       "slug": "amazfit-gts-4-mini-black-3",
       "title": "Amazfit GTS 4 mini (черный)",
       "preview": "/images/smart-devices/smart-device-1.jpg",
-      "price": 2990
+      "price": 2990,
+      "createdAt": "2023-01-23 00:20:20"
     },
     {
       "id": 17,
@@ -175,7 +191,8 @@
       "slug": "amazfit-gts-4-mini-black-4",
       "title": "Amazfit GTS 4 mini (черный)",
       "preview": "/images/smart-devices/smart-device-1.jpg",
-      "price": 3990
+      "price": 3990,
+      "createdAt": "2023-01-23 00:20:20"
     },
     {
       "id": 18,
@@ -184,7 +201,8 @@
       "slug": "amazfit-gts-4-mini-black-5",
       "title": "Amazfit GTS 4 mini (черный)",
       "preview": "/images/smart-devices/smart-device-1.jpg",
-      "price": 4590
+      "price": 4590,
+      "createdAt": "2023-01-23 00:20:20"
     },
     {
       "id": 19,
@@ -193,7 +211,40 @@
       "slug": "amazfit-gts-4-mini-black-6",
       "title": "Amazfit GTS 4 mini (черный)",
       "preview": "/images/smart-devices/smart-device-1.jpg",
-      "price": 7490
+      "price": 7490,
+      "createdAt": "2023-01-23 00:20:20"
+    }
+  ],
+  "cart": [
+    {
+      "id": 1,
+      "productId": 2,
+      "count": 2
+    },
+    {
+      "id": 2,
+      "productId": 4,
+      "count": 1
+    },
+    {
+      "id": 3,
+      "productId": 8,
+      "count": 3
+    },
+    {
+      "id": 4,
+      "productId": 10,
+      "count": 1
+    },
+    {
+      "id": 5,
+      "productId": 14,
+      "count": 5
+    },
+    {
+      "id": 6,
+      "productId": 16,
+      "count": 12
     }
   ]
 }

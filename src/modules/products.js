@@ -1,5 +1,6 @@
 import { get } from './api'
 import { findIdBySlug } from './categories'
+import { Rubbles } from './utils'
 
 let params = new URLSearchParams(window.location.search)
 let categorySlug = params.get('slug')
@@ -28,7 +29,7 @@ let render = (data) => {
 
                             <div class="row">
                                 <div class="col d-flex align-itemns-center justify-content-between">
-                                    <h4>${item.price} ₽</h4>
+                                    <h4>${Rubbles.format(item.price)}</h4>
                                     <button type="button" class="btn btn-outline-dark">
                                         <img src="/images/icon/shopping-cart-big.svg" alt="add-to-cart">
                                     </button>
