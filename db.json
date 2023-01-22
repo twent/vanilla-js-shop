@@ -2,5 +2,25 @@
   "profile": {
     "login": "admin",
     "password": "12345678"
-  }
+  },
+  "categories": [
+    {
+      "id": 1,
+      "slug": "phones",
+      "title": "Смартфоны",
+      "preview": "/images/phones/preview.jpg"
+    },
+    {
+      "id": 2,
+      "slug": "accessories",
+      "title": "Аксессуары",
+      "preview": "/images/accessory/preview.jpg"
+    },
+    {
+      "id": 3,
+      "slug": "smart-devices",
+      "title": "Умные устройства",
+      "preview": "/images/usage/preview.jpg"
+    }
+  ]
 }

@@ -18,7 +18,7 @@ export let auth = () => {
         authData && checkAuthData(authData)
     }
 
-    async function validateLoginForm(loginForm) {
+    let validateLoginForm = async (loginForm) => {
         let loginFormData = new FormData(loginForm)
 
         let loginValue = loginFormData.get('login')
@@ -50,7 +50,7 @@ export let auth = () => {
         loginForm.classList.remove('was-validated')
     }
 
-    async function checkAuthData(authData) {
+    let checkAuthData = async (authData) => {
         let userData = await get('/profile')
 
         if (
