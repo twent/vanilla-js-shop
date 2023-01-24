@@ -1,17 +1,19 @@
-import { get } from './api'
-import { findBySlug } from './categories'
-import { Rubbles } from './utils'
+import { request } from './api'
+import { Categories } from './categories'
+import { Rubbles, upperify } from './utils'
 
 let catalogTitleElement = document.getElementById('catalog-title')
+
 let params = new URLSearchParams(window.location.search)
-let categorySlug = params.get('slug')
-let category = findBySlug(categorySlug)
+let categorySlugUpperCase = params.get('slug') ? upperify(params.get('slug')) : null
+let category = Object.hasOwn(Categories, categorySlugUpperCase) ? Categories[categorySlugUpperCase] : null
+
 let path = category ? `/products?categoryId=${category.id}` : '/products'
 let catalogTitle = category ? category.title : 'Каталог'
 //let path = categorySlug ? `/products?category.slug=${categorySlug}&_expand=category` : '/products'
 
 export let renderProducts = async () => {
-    let data = await get(path)
+    let data = await request(path)
 
     catalogTitleElement.textContent = catalogTitle
     data && render(data)

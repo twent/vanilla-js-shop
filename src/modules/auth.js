@@ -1,4 +1,4 @@
-import { get } from './api'
+import { request } from './api'
 import { openModal, closeModal } from "./modals"
 
 export let auth = () => {
@@ -27,8 +27,8 @@ export let auth = () => {
 
         if (loginValue && passwordValue) {
             authData = {
-                login: loginValue,
-                password: passwordValue,
+                login: loginValue.trim(),
+                password: passwordValue.trim(),
             }
 
             await checkAuthData(authData)
@@ -51,7 +51,7 @@ export let auth = () => {
     }
 
     let checkAuthData = async (authData) => {
-        let userData = await get('/profile')
+        let userData = await request('/profile')
 
         if (
             (userData.login && userData.login == authData.login) &&
@@ -59,7 +59,7 @@ export let auth = () => {
         ) {
             resetLoginFormErrors()
             localStorage.setItem('authData', JSON.stringify(userData))
-
+            
             successLoginDomActions()
         } else {
             showLoginFormErrors()
@@ -69,6 +69,7 @@ export let auth = () => {
     }
 
     let successLoginDomActions = () => {
+        loginForm.reset()
         authBtn.classList.add('d-none')
 
         logoutBtn.classList.remove('d-none')

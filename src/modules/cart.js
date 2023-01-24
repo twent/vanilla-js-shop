@@ -1,4 +1,4 @@
-import { get } from "./api"
+import { request } from "./api"
 import { openModal } from "./modals"
 import { Rubbles } from "./utils"
 
@@ -8,7 +8,7 @@ let totalPriceElement = cartModal.querySelector('#cart-totlal-price')
 
 export let cart = () => {
     openCartBtn.addEventListener('click', async () => {
-        let data = await get('/cart?_expand=product')
+        let data = await request('/cart?_expand=product')
         
         data && render(data)
         

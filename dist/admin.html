@@ -55,25 +55,25 @@
                             <h3>Добавление категории</h3>
                         </div>
                     </div>
-                    <div class="row mb-3">
+                    <form id="create-category-form" class="row mb-3">
                         <div class="col col-12 col-md-6">
                             <div class="mb-3">
-                                <label for="category-name" class="form-label">Введите название категории</label>
-                                <input type="text" class="form-control" id="category-name">
+                                <label for="category-title" class="form-label">Введите название категории</label>
+                                <input type="text" class="form-control" name="title" id="category-title">
                             </div>
                         </div>
 
                         <div class="col col-12 col-md-6">
                             <div class="mb-3">
-                                <label for="category-image" class="form-label">Добавьте картинку категории</label>
-                                <input class="form-control" type="file" id="category-image">
+                                <label for="category-preview" class="form-label">Добавьте картинку категории</label>
+                                <input class="form-control" type="file" name="preview" id="category-preview">
                             </div>
                         </div>
 
                         <div class="col col-12">
-                            <button type="button" class="btn btn-dark" id="category-add-btn">Добавить</button>
+                            <button type="submit" class="btn btn-dark" id="create-category-btn">Добавить</button>
                         </div>
-                    </div>
+                    </form>
 
                     <div class="row">
                         <div class="col table-responsive-sm">
@@ -87,33 +87,7 @@
                                     </tr>
                                 </thead>
                                 <tbody id="category-container">
-                                    <tr>
-                                        <th scope="row">1</th>
-                                        <td>Смартфоны</td>
-                                        <td class="text-end">
-                                            <button type="button" class="btn btn-outline-danger btn-sm">
-                                                удалить
-                                            </button>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <th scope="row">2</th>
-                                        <td>Аксессуары</td>
-                                        <td class="text-end">
-                                            <button type="button" class="btn btn-outline-danger btn-sm">
-                                                удалить
-                                            </button>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <th scope="row">3</th>
-                                        <td>Умные устройства</td>
-                                        <td class="text-end">
-                                            <button type="button" class="btn btn-outline-danger btn-sm">
-                                                удалить
-                                            </button>
-                                        </td>
-                                    </tr>
+                                    <!-- Render with JS -->
                                 </tbody>
                             </table>
                         </div>
@@ -129,50 +103,49 @@
                         </div>
                     </div>
                     
-                    <div class="row mb-3">
-                        <div class="col col-12 col-md-6">
-                            <select class="form-select" id="product-category">
-                                <option selected>Выберите категорию</option>
-                                <option value="0">Смартфоны</option>
-                                <option value="1">Аксессуары</option>
-                                <option value="2">Умные устройства</option>
-                            </select>
-                        </div>
-                    </div>
-
-                    <div class="row mb-3">
-                        <div class="col col-12 col-md-6">
-                            <div class="mb-3">
-                                <label for="category-name" class="form-label">Введите название подкатегории</label>
-                                <input type="text" class="form-control" id="product-title">
+                    <form id="create-product-form">
+                        <div class="row mb-3">
+                            <div class="col col-12 col-md-6">
+                                <select class="form-select" id="product-category-select">
+                                    <option selected>Выберите категорию</option>
+                                </select>
                             </div>
                         </div>
-
-                        <div class="col col-12 col-md-6">
-                            <div class="mb-3">
-                                <label for="category-name" class="form-label">Введите название товара</label>
-                                <input type="text" class="form-control" id="product-name">
+    
+                        <div class="row mb-3">
+                            <div class="col col-12 col-md-6">
+                                <div class="mb-3">
+                                    <label for="category-name" class="form-label">Введите название подкатегории</label>
+                                    <input type="text" class="form-control" id="product-title">
+                                </div>
+                            </div>
+    
+                            <div class="col col-12 col-md-6">
+                                <div class="mb-3">
+                                    <label for="category-name" class="form-label">Введите название товара</label>
+                                    <input type="text" class="form-control" id="product-name">
+                                </div>
+                            </div>
+    
+                            <div class="col col-12 col-md-6">
+                                <div class="mb-3">
+                                    <label for="category-sysname" class="form-label">Добавьте цену товара</label>
+                                    <input type="number" class="form-control" id="product-price">
+                                </div>
+                            </div>
+    
+                            <div class="col col-12 col-md-6">
+                                <div class="mb-3">
+                                    <label for="category-image" class="form-label">Добавьте картинку товара</label>
+                                    <input class="form-control" type="file" id="product-image">
+                                </div>
+                            </div>
+    
+                            <div class="col col-12">
+                                <button type="submit" class="btn btn-dark">Добавить</button>
                             </div>
                         </div>
-
-                        <div class="col col-12 col-md-6">
-                            <div class="mb-3">
-                                <label for="category-sysname" class="form-label">Добавьте цену товара</label>
-                                <input type="number" class="form-control" id="product-price">
-                            </div>
-                        </div>
-
-                        <div class="col col-12 col-md-6">
-                            <div class="mb-3">
-                                <label for="category-image" class="form-label">Добавьте картинку товара</label>
-                                <input class="form-control" type="file" id="product-image">
-                            </div>
-                        </div>
-
-                        <div class="col col-12">
-                            <button type="button" class="btn btn-dark">Добавить</button>
-                        </div>
-                    </div>
+                    </form>
 
                     <div class="row">
                         <div class="col">
