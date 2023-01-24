@@ -19,6 +19,8 @@ export const Rubbles = new Intl.NumberFormat('ru-RU', {
     maximumFractionDigits: 0,
 })
 
+export let Timestamp = new Date().toISOString().slice(0, 19).replace('T', ' ');
+
 export const slugify = str =>
   str.toLowerCase()
     .trim()

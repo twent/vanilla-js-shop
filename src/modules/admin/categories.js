@@ -16,43 +16,35 @@ export const categoriesModule = () => {
         let title = formData.get('title')
         let preview = formData.get('preview')
 
-        if (!title || !preview) { 
+        let previevHasValidFormat =
+            preview.type === 'image/jpeg'
+            || preview.type === 'image/jpg'
+            || preview.type === 'image/png'
+
+        if (!title || !preview || preview.size <= 0 || !previevHasValidFormat) {
             return submitBtn.disabled = true
         }
-        
-        submitBtn.disabled = false
-        
-        if (preview.size > 0) {
-            if (preview.type !== 'image/jpeg' || preview.type !== 'image/jpg' || preview.type !== 'image/png') {
-                submitBtn.disabled = true
-            }
 
-            let fileReader = new FileReader()
-                
-            fileReader.onload = () => {
-                submitBtn.disabled = false
-                // Get image in Base64
-                previewInBase64 = fileReader.result
-            }
+        let fileReader = new FileReader()
 
-            fileReader.onerror = () => {
-                return submitBtn.disabled = true
-            }
-
-            fileReader.readAsDataURL(preview)
+        fileReader.onload = () => {
+            submitBtn.disabled = false
+            // Get image in Base64
+            previewInBase64 = fileReader.result
         }
 
+        fileReader.readAsDataURL(preview)
+        
         return [title.trim(), previewInBase64]
     }
 
-    let updateCategoriesTable = async () => {
+    let renderCategoriesTable = async () => {
         let categories = await request('/categories')
         categories && renderCategories(categories)
     }
 
     let renderCategories = (data) => {
         categoriesContainer.innerHTML = ''
-        productCategorySelect.innerHTML = '<option selected>Выберите категорию</option>'
 
         data.forEach((item, index) => {
             categoriesContainer.insertAdjacentHTML('beforeend', `
@@ -73,13 +65,14 @@ export const categoriesModule = () => {
             `)
         })
 
+        // Delete buttons
         let deleteCategoryBtns = categoriesContainer.querySelectorAll('.btn.btn-outline-danger')
 
         deleteCategoryBtns.forEach(btn => btn.addEventListener('click', async () => {
             let id = btn.dataset.id
-            console.log(id);
+
             id && await request('/categories', HttpMethods.DELETE, id)
-                .then(() => updateCategoriesTable())
+                .then(() => renderCategoriesTable())
         }))
     }
 
@@ -87,9 +80,10 @@ export const categoriesModule = () => {
         setTimeout(() => validateFormData(), 750)
     }))
 
+    // Create category
     form.addEventListener('submit', async (event) => {
         event.preventDefault()
-        
+
         let [title, preview] = validateFormData()
 
         let category = {
@@ -98,11 +92,14 @@ export const categoriesModule = () => {
             "preview": preview
         }
 
-        await request('/categories', HttpMethods.POST, category).then(() => form.reset())
-            .then(() => updateCategoriesTable())
+        return await request('/categories', HttpMethods.POST, category)
+            .then(() => {
+                form.reset()
+                renderCategoriesTable()
+            })
     })
 
+    // Init
     validateFormData()
-    
-    updateCategoriesTable()
+    renderCategoriesTable()
 }

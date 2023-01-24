@@ -106,8 +106,8 @@
                     <form id="create-product-form">
                         <div class="row mb-3">
                             <div class="col col-12 col-md-6">
-                                <select class="form-select" id="product-category-select">
-                                    <option selected>Выберите категорию</option>
+                                <select name="category_id" class="form-select" id="product-category-select">
+                                    <option value="0" selected>Выберите категорию</option>
                                 </select>
                             </div>
                         </div>
@@ -116,40 +116,40 @@
                             <div class="col col-12 col-md-6">
                                 <div class="mb-3">
                                     <label for="category-name" class="form-label">Введите название подкатегории</label>
-                                    <input type="text" class="form-control" id="product-title">
+                                    <input name="subcategory" type="text" class="form-control" id="product-title">
                                 </div>
                             </div>
     
                             <div class="col col-12 col-md-6">
                                 <div class="mb-3">
                                     <label for="category-name" class="form-label">Введите название товара</label>
-                                    <input type="text" class="form-control" id="product-name">
+                                    <input name="title" type="text" class="form-control" id="product-name">
                                 </div>
                             </div>
     
                             <div class="col col-12 col-md-6">
                                 <div class="mb-3">
                                     <label for="category-sysname" class="form-label">Добавьте цену товара</label>
-                                    <input type="number" class="form-control" id="product-price">
+                                    <input name="price" type="number" class="form-control" id="product-price">
                                 </div>
                             </div>
     
                             <div class="col col-12 col-md-6">
                                 <div class="mb-3">
                                     <label for="category-image" class="form-label">Добавьте картинку товара</label>
-                                    <input class="form-control" type="file" id="product-image">
+                                    <input name="preview" class="form-control" type="file" id="product-image">
                                 </div>
                             </div>
     
                             <div class="col col-12">
-                                <button type="submit" class="btn btn-dark">Добавить</button>
+                                <button id="create-product-btn" type="submit" class="btn btn-dark">Добавить</button>
                             </div>
                         </div>
                     </form>
 
                     <div class="row">
                         <div class="col">
-                            <table class="table table-dark table-striped" id="goods-table">
+                            <table class="table table-dark table-striped" id="products-table">
                                 <caption style="display: none;" class="text-center">Нет данных</caption>
                                 <thead>
                                     <tr>
@@ -161,39 +161,7 @@
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <tr>
-                                        <th scope="row">1</th>
-                                        <td>Смартфоны</td>
-                                        <td>Xiaomi Redmi A1+ 2/32GB (голубой)</td>
-                                        <td>4 990 ₽</td>
-                                        <td class="text-end">
-                                            <button type="button" class="btn btn-outline-danger btn-sm">
-                                                удалить
-                                            </button>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <th scope="row">2</th>
-                                        <td>Смартфоны</td>
-                                        <td>Xiaomi Redmi A1+ 2/32GB (голубой)</td>
-                                        <td>4 990 ₽</td>
-                                        <td class="text-end">
-                                            <button type="button" class="btn btn-outline-danger btn-sm">
-                                                удалить
-                                            </button>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <th scope="row">3</th>
-                                        <td>Смартфоны</td>
-                                        <td>Xiaomi Redmi A1+ 2/32GB (голубой)</td>
-                                        <td>4 990 ₽</td>
-                                        <td class="text-end">
-                                            <button type="button" class="btn btn-outline-danger btn-sm">
-                                                удалить
-                                            </button>
-                                        </td>
-                                    </tr>
+                                    <!-- Render with JS -->
                                 </tbody>
                             </table>
                         </div>
