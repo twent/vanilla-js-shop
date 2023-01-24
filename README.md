@@ -1,8 +1,14 @@
 # Frontend JavaScript intensive
-Project for learning vanilla JS
+Online shop project for learning vanilla JS
+
+## Simplest client interactivity:
+- Catalog (fully render with JS)
+- Cart modal with data from JSON server
+- Auth (login/logout)
+- Admin dashboard
 
 ## Used in project:
-- Json Server (Back-end emulation)
+- Json Server (back-end emulation)
 - Webpack
 - Bootstrap
 
