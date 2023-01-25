@@ -8,7 +8,6 @@ export const HttpMethods = Object.freeze({
     POST: "POST",
     PUT: "PUT",
     PATCH: "PATCH",
-    UPDATE: "UPDATE",
     DELETE: "DELETE",
 })
 

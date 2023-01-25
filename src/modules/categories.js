@@ -10,15 +10,27 @@ export const Categories = Object.freeze({
     SMART_DEVICES: { id: 3, slug: "smart-devices" ,title: "Умные устройства" }
 })
 
+let categoriesContainer = document.getElementById('categories-container')
+let categorySearch = document.querySelector('input.catalog-search')
+
 export let renderCategories = async () => {
     let data = await request('/categories')
 
     data && render(data)
+
 }
 
-let categoriesContainer = document.getElementById('categories-container')
+categorySearch.addEventListener('input', () => {
+    setTimeout(async () => {
+        let data = await request(`/categories?q=${categorySearch.value}`)
+        data && render(data)
+    }, 750)
+})
+
 
 let render = (data) => {
+    categoriesContainer.innerHTML = ''
+
     data.forEach((item) => {
         categoriesContainer.insertAdjacentHTML('beforeend', `
             <div class="col col-12 col-md-6 col-lg-4 mb-3">

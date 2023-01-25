@@ -21,11 +21,11 @@ export let request = async (path, method = HttpMethods.GET, data = null) => {
             }
         }
 
-        if (method === HttpMethods.POST || method === HttpMethods.PUT) {
+        if (method === HttpMethods.POST || method === HttpMethods.PATCH || method === HttpMethods.PUT) {
             config.body = JSON.stringify(data)
         }
 
-        if (method === HttpMethods.DELETE || method === HttpMethods.PUT) {
+        if (method === HttpMethods.DELETE) {
             path = `${path}/${data}`
         }
     } else {
@@ -59,5 +59,8 @@ export let request = async (path, method = HttpMethods.GET, data = null) => {
 
             return response.json()
         })
-        .catch(error => console.error(error.message))
+        .catch(error => {
+            console.error(error.message)
+            return Promise.reject(error.message)
+        })
 }
