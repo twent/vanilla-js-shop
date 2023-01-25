@@ -77,7 +77,7 @@ export const productsModule = () => {
             let id = btn.dataset.id
 
             id && await request('/products', HttpMethods.DELETE, id)
-                .then(() => updateProductsTable())
+                .then(() => renderProductsTable())
         }))
     }
 
